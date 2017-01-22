@@ -52,7 +52,6 @@ app.use(function(err, req, res, next) {
 
 // run appSettings
 appSettings.initialize(app);
-console.log(appSettings.getConfig('port'));
 app.listen(appSettings.getConfig('port'), function () {
     console.log("The server is running on port %s", appSettings.getConfig('port'));
 });
