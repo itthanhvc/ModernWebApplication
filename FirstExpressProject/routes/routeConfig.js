@@ -1,11 +1,10 @@
 ﻿var index = require('./index');
-var users = require('./users');
-var inventors = require('./inventors');
+var contactus = require('./contactus');
 function RouteConfig(expApp) {
     this.app = expApp;
 }
 RouteConfig.prototype.config = function () {
     this.app.use('/', index);
-    this.app.use('/inventors', inventors);
+    this.app.use('/contactus', contactus);
 }
 module.exports = RouteConfig;

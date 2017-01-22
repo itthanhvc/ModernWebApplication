@@ -1,8 +1,8 @@
 ﻿fs = require('fs');
 function FileReader() {
-    
+
 }
-FileReader.prototype.readFileContent = function(filePath, requireJsonConverter, encoding ) {
+FileReader.prototype.readFileContent = function (filePath, requireJsonConverter, encoding) {
     encoding = encoding | "utf8";
     requireJsonConverter = requireJsonConverter | false;
     return new Promise(function (resolve, reject) {
@@ -21,6 +21,15 @@ FileReader.prototype.readFileContent = function(filePath, requireJsonConverter, 
             console.log("readFileContent-2-" + err.toString());
             reject(err.toString());
         });
+    });
+}
+
+FileReader.prototype.saveRequestBody = function (text) {
+    return new Promise(function (resolve, reject) {
+        var stream = fs.createWriteStream("././sampleFiles/request" + new Date().getTime() + ".txt", { flag: "w" });
+        stream.write(text);
+        resolve("done");
+        stream.end();
     });
 }
 module.exports = new FileReader();

@@ -24,14 +24,18 @@
                     <ul class="nav navbar-nav">
                         <li><a href="/">Home</a></li>
                         <li><a href="/inventors">Inventors</a></li>
+                        <li><a href="/contactus">Contactus</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
         </nav>
     </header>
-    <section role="main">
-        {% block content %}{% endblock %}
-    </section>
-
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <section role="main">
+                {% block content %}{% endblock %}
+            </section>
+        </div>
+    </div>
 </body>
 </html>
