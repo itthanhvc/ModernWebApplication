@@ -1,1 +1,0 @@
-set DEBUG=Express:* & npm start

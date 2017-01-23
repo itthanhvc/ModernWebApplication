@@ -16,8 +16,6 @@ AppSettings.prototype.initialize = function (expApp) {
     this.app.set("x-powered-by", false);
 }
 AppSettings.prototype.getConfig = function (key) {
-    console.log("5-" + key);
-    console.log("6-" + this.app.get(key));
     return this.app.get(key);
 }
 module.exports = new AppSettings();

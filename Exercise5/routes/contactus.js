@@ -11,9 +11,6 @@ router.post('/', function (req, res, next) {
     req.assert("message", "Message is required").notEmpty();
 
     var errors = req.validationErrors();
-    console.log(errors);
-    console.log(req.body);
-    console.log(req.fullname);
     if (errors)
         res.render('contactus', { title: 'Contact Us', errors: errors });
     else {
@@ -21,7 +18,6 @@ router.post('/', function (req, res, next) {
             "Full name: %s \r\n" +
             "Type: %s \r\n" +
             "Message: %s", req.ip, req.body.fullname, req.body.type, req.body.message);
-        console.log(message);
         fileReader.saveRequestBody(message)
             .then(()=> res.render('thankyou', { title: 'Thanh you', fullname: req.body.fullname }))
             .catch(error => res.end(error));
