@@ -5,12 +5,12 @@ var dataService = require('../base/dataService');
 var cryptoHelper = require('../helpers/cryptHelper');
 /* GET Contact page. */
 router.get('/', function (req, res, next) {
-    dataService.find("messages")
-        .then(items => {
-            var message = cryptoHelper.decrypt(items[0].message, appConstants.crytoConfig.algorithm, appConstants.crytoConfig.key);
+    dataService.getItem("messages")
+        .then(item => {
+            var message = cryptoHelper.decrypt(item.message, appConstants.crytoConfig.algorithm, appConstants.crytoConfig.key);
             res.render('message', {
                 title: 'Messages',
-                encryptMsg: items[0].message,
+                encryptMsg: item.message,
                 decryptMsg: message
             });
         })
