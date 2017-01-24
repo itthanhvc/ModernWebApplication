@@ -1,5 +1,5 @@
 # ModernWebApplication
-<h1>This is my Repositories to contain all homework for Modern Web Application Course - Maharishi University.</h1></br>
+<h3>This is my Repositories to contain all homework for Modern Web Application Course - Maharishi University.</h3></br>
 Technical Highlight: <strong> Nodejs, ExpressJs, MongoDB, Express-Generator structures, NodeJs Debugger (Node Inspector)</strong></br>
 <p>
 Project Structure:</br>
@@ -15,7 +15,7 @@ Project Structure:</br>
 *****************************
 <p>
 <label>Notes: </lable>
-<h3>From Exercise 7:</h3></br>
+<h4>From Exercise 7:</h4>
 1/ Added DataService.js (base/dataService.js) to handle for mongoDb instance with MongoSkin</br>
 2/ Added CryptHelper.js (Helpers/CryptHelper.js) to handle for crypt - encrypt and decrypt methods</br>
 </p>
