@@ -3,13 +3,13 @@
 Technical Highlight: <strong> Nodejs, ExpressJs, MongoDB, Express-Generator structures, NodeJs Debugger (Node Inspector)</strong></br>
 <p>
 Project Structure:</br>
-  |_ /Base            --- base classes (dataService.js, ect)</br>
-  |_ /helpers         --- utilities </br>
-  |_ /public          --- routers and routerConfig.js</br>
-  |_ /views           --- html files</br>
-  |_ app.Constants.js --- static key/value pairs</br>
-  |_ app.js           --- start point</br>
-  |_ app.settings.js  --- global config ('strict route', 'view cache', ect)</br>
+&nbsp;&nbsp;|_ /Base            --- base classes (dataService.js, ect)</br>
+&nbsp;&nbsp;|_ /helpers         --- utilities </br>
+&nbsp;&nbsp;|_ /public          --- routers and routerConfig.js</br>
+&nbsp;&nbsp;|_ /views           --- html files</br>
+&nbsp;&nbsp;|_ app.Constants.js --- static key/value pairs</br>
+&nbsp;&nbsp;|_ app.js           --- start point</br>
+&nbsp;&nbsp;|_ app.settings.js  --- global config ('strict route', 'view cache', ect)</br>
   
 </p>
 *****************************
