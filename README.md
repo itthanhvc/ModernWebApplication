@@ -1,5 +1,5 @@
 # ModernWebApplication
-<h3>This is my Repositories to contain all homework for Modern Web Application Course - Maharishi University.</h3></br>
+<h3>This is my repositories to contain all homework for Modern Web Application Course - Maharishi University.</h3></br>
 Technical Highlight: <strong> Nodejs, ExpressJs, MongoDB, Express-Generator structures, NodeJs Debugger (Node Inspector)</strong></br>
 <p>
 Project Structure:</br>
