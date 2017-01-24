@@ -2,14 +2,14 @@
 <h1>This is my Repositories to contain all homework for Modern Web Application Course - Maharishi University.</h1></br>
 Technical Highlight: <strong> Nodejs, ExpressJs, MongoDB, Express-Generator structures, NodeJs Debugger (Node Inspector)</strong></br>
 <p>
-Project Structure:
-  |_ /Base            --- base classes (dataService.js, ect)
-  |_ /helpers         --- utilities 
-  |_ /public          --- routers and routerConfig.js
-  |_ /views           --- html files
-  |_ app.Constants.js --- static key/value pairs
-  |_ app.js           --- start point
-  |_ app.settings.js  --- global config ('strict route', 'view cache', ect)
+Project Structure:</br>
+  |_ /Base            --- base classes (dataService.js, ect)</br>
+  |_ /helpers         --- utilities </br>
+  |_ /public          --- routers and routerConfig.js</br>
+  |_ /views           --- html files</br>
+  |_ app.Constants.js --- static key/value pairs</br>
+  |_ app.js           --- start point</br>
+  |_ app.settings.js  --- global config ('strict route', 'view cache', ect)</br>
   
 </p>
 *****************************
