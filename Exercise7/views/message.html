@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+<div class="col-md-6 col-xs-12 form-horizontal">
+    <div class="form-group">
+        <label>Encrypt Message</label>
+        <span class="form-control">{{encryptMsg}}</span>
+    </div>
+    <div class="form-group">
+        <label>Decrypt Message</label>
+        <span class="form-control">{{decryptMsg}}</span>
+    </div>
+</div>
+{% endblock %}
