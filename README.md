@@ -19,7 +19,7 @@ Project Structure:</br>
 1/ Added DataService.js (base/dataService.js) to handle for mongoDb instance with MongoSkin</br>
 2/ Added CryptHelper.js (Helpers/CryptHelper.js) to handle for crypt - encrypt and decrypt methods</br>
 </p>
-*****************************d
+*****************************
 <div>
   <image src="/geolocation - exercise 9.jpg"/>
 </div>
