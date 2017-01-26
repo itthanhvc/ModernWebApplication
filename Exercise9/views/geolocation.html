@@ -1,0 +1,124 @@
+{% extends 'layout.html' %}
+
+{% block title %}Geolocation{% endblock %}
+
+{% block content %}
+<div class="row">
+    <form action="/geolocation" method="POST" class="col-md-6 col-xs-12">
+        <div class="form-group">
+            <label>Action</label>
+            <select class="form-control" name="action" id="action">
+                <option value="delete">delete</option>
+                <option value="add">add</option>
+                <option value="update">update</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" placeholder="Please Enter Name" id="name" name="name"/>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category</label>
+            <input type="text" class="form-control" placeholder="Please Enter Category" id="category" name="category"/>
+        </div>
+        <div class="form-group">
+            <label for="longtitude">Longitude</label>
+            <input type="text" class="form-control" placeholder="Please Enter Longtitude" id="longtitude" name="longtitude"/>
+        </div>
+        <div class="form-group">
+            <label for="latitude">Latitude</label>
+            <input type="text" class="form-control" placeholder="Please Enter Latitude" id="latitude" name="latitude"/>
+        </div>
+        <div class="form-group">
+            <input class="btn btn-info" type="submit" text="update"/>
+        </div>
+    </form>
+    {% for error in errors %}
+    <div class="text-danger">{{error.msg}}</div>
+    {% endfor %}
+    <div class="col-md-6 col-xs-12">
+        <table class="table">
+            <thead>
+            <tr>
+                <th colspan="3">
+                    <h1>Locations</h1>
+                </th>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Longitude</th>
+                <th>Latitude</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for geo in geoLocations %}
+            <tr>
+                <td>{{ geo.name }}</td>
+                <td>{{ geo.category }}</td>
+                <td>{{ geo.location[0]}}</td>
+                <td>{{ geo.location[1] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<hr/>
+<div class="row">
+    <form action="/geolocation/near" method="POST" class="col-md-6 col-xs-12">
+        <div class="form-group">
+            <label for="criteria">Search Criteria</label>
+            <input type="text" class="form-control" placeholder="Please Search Criteria" id="criteria" name="criteria" />
+        </div>
+
+        <div class="form-group">
+            <label for="currentLong">Longitude</label>
+            <input type="text" class="form-control" id="currentLong" name="currentLong" />
+        </div>
+        <div class="form-group">
+            <label for="currentLat">Latidue</label>
+            <input type="text" class="form-control" id="currentLat" name="currentLat" />
+        </div>
+        <div class="form-group">
+            <input class="btn btn-info" type="submit" text="Get Near Locations" />
+        </div>
+    </form>
+    <div class="col-md-6 col-xs-12" id="">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="3">
+                        <h1>Near Locations</h1>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Longitude</th>
+                    <th>Latitude</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for geo in nearLocations %}
+                <tr>
+                    <td>{{ geo.name }}</td>
+                    <td>{{ geo.category }}</td>
+                    <td>{{ geo.location[0]}}</td>
+                    <td>{{ geo.location[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    navigator.geolocation.getCurrentPosition(function (position) {
+        document.getElementById("currentLong").value = position.coords.longitude;
+        document.getElementById("currentLat").value = position.coords.latitude;
+    }, function (msg) {
+        console.log(msg.code + msg.message);
+    })
+</script>
+{% endblock %}
