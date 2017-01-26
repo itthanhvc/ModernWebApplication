@@ -20,4 +20,6 @@ Project Structure:</br>
 2/ Added CryptHelper.js (Helpers/CryptHelper.js) to handle for crypt - encrypt and decrypt methods</br>
 </p>
 *****************************d
-<image src="/geolocation - exercise 9.jpg"/>
+<div>
+  <image src="/geolocation - exercise 9.jpg"/>
+</div>
