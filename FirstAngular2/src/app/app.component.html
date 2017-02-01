@@ -1,0 +1,6 @@
+<h1>
+  {{title}}
+</h1>
+
+<app-counter [counter]="10" (counterChange)="ComponentCounterValueChange($event)"></app-counter>
+<div>Component Counter Value: {{ComponentCounterValue}}</div>
