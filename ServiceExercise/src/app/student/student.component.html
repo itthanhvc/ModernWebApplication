@@ -1,0 +1,16 @@
+<h2>
+  Students
+</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let std of students">
+      <td><a [routerLink]="['','profile']" [queryParams]="{id: std.id}">{{std.name}}</a></td>
+    </tr>
+  </tbody>
+</table>
+<router-outlet></router-outlet>

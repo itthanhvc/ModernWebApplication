@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-10">
+            <h1>{{title}}</h1>
+            <hr>
+            <a [routerLink]="['']">Homepage</a> |
+            <a [routerLink]="['student']">Students</a>
+            <hr>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
