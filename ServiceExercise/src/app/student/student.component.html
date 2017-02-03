@@ -1,6 +1,12 @@
 <h2>
   Students
 </h2>
+<div>
+  <label for="custom">Custom id: </label>
+  <input id="custom" type="text" #custom (keyup)="0"/>
+  <a [routerLink]="['','profile']" [queryParams]="{id: custom.value}">Try navigate to Profile</a>
+</div>
+<hr/>
 <table class="table">
   <thead>
     <tr>
@@ -13,4 +19,3 @@
     </tr>
   </tbody>
 </table>
-<router-outlet></router-outlet>
