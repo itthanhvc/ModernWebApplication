@@ -11,7 +11,7 @@ export class ProfileComponent implements OnDestroy {
   private subscription: Subscription;
   student: any;
   constructor(private activatedRoute: ActivatedRoute, private db: db) {
-    this.subscription = activatedRoute.queryParams.subscribe(
+    this.subscription = activatedRoute.params.subscribe(
       (param: any) => {
         this.student = db.getDataById(param['id']);
         console.log(param);

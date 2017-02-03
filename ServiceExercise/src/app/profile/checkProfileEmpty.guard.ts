@@ -7,8 +7,8 @@ import { Injectable } from '@angular/core';
 export class CheckProfileEmptyGuard implements CanActivate {
   constructor(private router: Router, private db: db) { }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | boolean {
-
-    if (route.queryParams["id"] == null || this.db.getDataById(route.queryParams['id']) == null) {
+    console.log(route);
+    if (route.params["id"] == null || this.db.getDataById(route.params['id']) == null) {
       this.router.navigate(['error']);;
       return false;
     }

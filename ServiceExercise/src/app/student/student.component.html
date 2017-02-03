@@ -4,7 +4,7 @@
 <div>
   <label for="custom">Custom id: </label>
   <input id="custom" type="text" #custom (keyup)="0"/>
-  <a [routerLink]="['','profile']" [queryParams]="{id: custom.value}">Try navigate to Profile</a>
+  <a [routerLink]="['','profile', custom.value]">Try navigate to Profile</a>
 </div>
 <hr/>
 <table class="table">
@@ -15,7 +15,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let std of students">
-      <td><a [routerLink]="['','profile']" [queryParams]="{id: std.id}">{{std.name}}</a></td>
+      <td><a [routerLink]="['','profile', std.id]">{{std.name}}</a></td>
     </tr>
   </tbody>
 </table>
