@@ -1,0 +1,21 @@
+<h2>
+  Students
+</h2>
+<div>
+  <label for="custom">Custom id: </label>
+  <input id="custom" type="text" #custom (keyup)="0"/>
+  <a [routerLink]="['','profile', custom.value]">Try navigate to Profile</a>
+</div>
+<hr/>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let std of students">
+      <td><a [routerLink]="['','profile', std.id]">{{std.name}}</a></td>
+    </tr>
+  </tbody>
+</table>
